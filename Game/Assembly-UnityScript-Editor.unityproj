@@ -39,17 +39,10 @@
 	<Reference Include="System.Core" />
 	<Reference Include="System.Xml.Linq" />
 	<Reference Include="UnityEngine">
-<<<<<<< HEAD
 	  <HintPath>D:/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
 	</Reference>
 	<Reference Include="UnityEditor">
 	  <HintPath>D:/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
-=======
-	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
-	</Reference>
-	<Reference Include="UnityEditor">
-	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
->>>>>>> origin/master
 	</Reference>
   </ItemGroup>
   <ItemGroup>
@@ -86,11 +79,7 @@
      <None Include="Assets\Sample Assets\Effects\Tessellation Shaders\Shaders\BumpedSpecularDisplacement.shader" />
      <None Include="Assets\Sample Assets\Effects\Light Shafts\Shaders\ColorFilter.shader" />
  <Reference Include="UnityEditor.Graphs">
-<<<<<<< HEAD
  <HintPath>D:/Unity/Editor/Data/Managed/UnityEditor.Graphs.dll</HintPath>
-=======
- <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEditor.Graphs.dll</HintPath>
->>>>>>> origin/master
  </Reference>
   </ItemGroup>
   <ItemGroup>
