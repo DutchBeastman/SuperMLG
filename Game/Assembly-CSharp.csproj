@@ -39,10 +39,10 @@
 	<Reference Include="System.Core" />
 	<Reference Include="System.Xml.Linq" />
 	<Reference Include="UnityEngine">
-	  <HintPath>D:/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
+	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
 	</Reference>
 	<Reference Include="UnityEditor">
-	  <HintPath>D:/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
+	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
 	</Reference>
   </ItemGroup>
   <ItemGroup>
@@ -50,8 +50,10 @@
      <Compile Include="Assets\Resources\Character\Scripts\CharacterUserControl.cs" />
      <Compile Include="Assets\Resources\PickUp\Scripts\PickUpRotation.cs" />
      <Compile Include="Assets\Resources\PickUp\Scripts\PickedUp.cs" />
+     <Compile Include="Assets\Resources\Scripts\PlayerRespawn.cs" />
      <Compile Include="Assets\Resources\Scripts\Rotation.cs" />
      <Compile Include="Assets\Resources\Scripts\WallTrap.cs" />
+     <Compile Include="Assets\Resources\Scripts\WinScript.cs" />
      <Compile Include="Assets\Sample Assets\2D\Scripts\Camera2DFollow.cs" />
      <Compile Include="Assets\Sample Assets\2D\Scripts\CameraFollow.cs" />
      <Compile Include="Assets\Sample Assets\2D\Scripts\Platformer2DUserControl.cs" />
