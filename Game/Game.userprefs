@@ -1,9 +1,9 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Sample Assets\Characters\Third Person Character\Scripts\ThirdPersonCharacter.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Resources\Scripts\WallTrap.cs">
     <Files>
-      <File FileName="Assets\Sample Assets\Characters\Third Person Character\Scripts\ThirdPersonCharacter.cs" Line="350" Column="2" />
-      <File FileName="Assets\Sample Assets\Characters\Third Person Character\Scripts\ThirdPersonUserControl.cs" Line="84" Column="1" />
+      <File FileName="Assets\Sample Assets\2D\Scripts\CameraFollow.cs" Line="14" Column="68" />
+      <File FileName="Assets\Resources\Scripts\WallTrap.cs" Line="16" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
