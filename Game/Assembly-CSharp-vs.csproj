@@ -46,6 +46,8 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Resources\Character\Scripts\Character.cs" />
+     <Compile Include="Assets\Resources\Character\Scripts\CharacterUserControl.cs" />
      <Compile Include="Assets\Resources\PickUp\Scripts\PickUpRotation.cs" />
      <Compile Include="Assets\Resources\PickUp\Scripts\PickedUp.cs" />
      <Compile Include="Assets\Resources\Scripts\Rotation.cs" />
