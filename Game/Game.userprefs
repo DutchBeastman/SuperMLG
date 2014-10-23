@@ -1,8 +1,8 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Sample Assets\Characters\Third Person Character\Scripts\ThirdPersonUserControl.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Resources\Scripts\WallTrap.cs">
     <Files>
-      <File FileName="Assets\Sample Assets\Characters\Third Person Character\Scripts\ThirdPersonUserControl.cs" Line="40" Column="52" />
+      <File FileName="Assets\Resources\Scripts\WallTrap.cs" Line="34" Column="14" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
