@@ -3,10 +3,9 @@ using System.Collections;
 
 public class Timer : MonoBehaviour {
 	
-	bool playing = true;												// is the game playing?
-	float secondsInGame = 0;											// amount of seconds under 60
-	float realTime = 0;													// the real time
-	int minutesInGame = 0;												// amount of minutes
+	float secondsInGame = 0;																// amount of seconds under 60
+	float realTime = 0;																		// the real time
+	int minutesInGame = 0;																	// amount of minutes
 
 	void Start () {
 	}

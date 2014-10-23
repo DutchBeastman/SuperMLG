@@ -3,14 +3,13 @@ using System.Collections;
 
 public class PickedUp : MonoBehaviour {
 	
-	public GameObject collectables;
+	public GameObject collectables;															// gameobject with collectables script
 
 	void OnCollisionEnter(Collision col){
 		if(col.collider.tag == "Player")
 			IGotPickedUp();
 	}
 	void IGotPickedUp(){
-		Debug.Log("this starts adding one to counter");
 		Destroy(this.gameObject);
 		collectables.GetComponent<Collectables>().AddOneToCounter();
 	}

@@ -5,10 +5,10 @@ public class Character : MonoBehaviour {
 
 	[SerializeField] float jumpPower = 12;								// determines the jump force applied when jumping (and therefore the jump height)
 	[SerializeField] float airSpeed = 6;								// determines the max speed of the character while airborne
-	[SerializeField] float airControl = 2;								// determines the response speed of controlling the character while airborne
+	//[SerializeField] float airControl = 2;								// determines the response speed of controlling the character while airborne
 	[Range(1,4)] [SerializeField] public float gravityMultiplier = 2;	// gravity modifier - often higher than natural gravity feels right for game characters
-	[SerializeField][Range(0.1f,3f)] float moveSpeedMultiplier = 1;	    // how much the move speed of the character will be multiplied by
-	[SerializeField][Range(0.1f,3f)] float animSpeedMultiplier = 1;	    // how much the animation of the character will be multiplied by
+	//[SerializeField][Range(0.1f,3f)] float moveSpeedMultiplier = 1;	    // how much the move speed of the character will be multiplied by
+	//[SerializeField][Range(0.1f,3f)] float animSpeedMultiplier = 1;	    // how much the animation of the character will be multiplied by
 	[SerializeField] AdvancedSettings advancedSettings;
 	
 	public static Character Instance;									// Creating an instance of the Character script to be accesed from other points
@@ -46,8 +46,8 @@ public class Character : MonoBehaviour {
 	Vector3 moveInput;
 	bool crouchInput;
 	bool jumpInput;
-	float turnAmount;
-	float forwardAmount;
+	//float turnAmount;
+	//float forwardAmount;
 	Vector3 velocity;
 	IComparer rayHitComparer;
 
@@ -99,9 +99,9 @@ public class Character : MonoBehaviour {
 	
 	void ConvertMoveInput ()
 	{
-		Vector3 localMove = transform.InverseTransformDirection (moveInput);
-		turnAmount = Mathf.Atan2 (localMove.x, localMove.z);
-		forwardAmount = localMove.z;
+		//Vector3 localMove = transform.InverseTransformDirection (moveInput);
+		//turnAmount = Mathf.Atan2 (localMove.x, localMove.z);
+		//forwardAmount = localMove.z;
 	}
 
 	void PreventStandingInLowHeadroom ()
