@@ -51,8 +51,10 @@
      <Compile Include="Assets\Resources\GUI\Scripts\Timer.cs" />
      <Compile Include="Assets\Resources\PickUp\Scripts\PickUpRotation.cs" />
      <Compile Include="Assets\Resources\PickUp\Scripts\PickedUp.cs" />
+     <Compile Include="Assets\Resources\Scripts\PlayerRespawn.cs" />
      <Compile Include="Assets\Resources\Scripts\Rotation.cs" />
      <Compile Include="Assets\Resources\Scripts\WallTrap.cs" />
+     <Compile Include="Assets\Resources\Scripts\WinScript.cs" />
      <Compile Include="Assets\Sample Assets\2D\Scripts\Camera2DFollow.cs" />
      <Compile Include="Assets\Sample Assets\2D\Scripts\CameraFollow.cs" />
      <Compile Include="Assets\Sample Assets\2D\Scripts\Platformer2DUserControl.cs" />
