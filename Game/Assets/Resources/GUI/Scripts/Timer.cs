@@ -3,32 +3,27 @@ using System.Collections;
 
 public class Timer : MonoBehaviour {
 	
-	bool playing = true;
-	float timeInGame;
-	int min;
+	bool playing = true;												// is the game playing?
+	float secondsInGame = 0;											// amount of seconds under 60
+	float realTime = 0;													// the real time
+	int minutesInGame = 0;												// amount of minutes
 
 	void Start () {
-		timeInGame = 0;
-		min = 0;
-		//StartCoroutine(Time);
 	}
-	
+
 	void Update () {
 
-		if(playing)
-			timeInGame =  Mathf.Round(100) /20;					// Making sure i get 2 digits after whole seconds
+		realTime  = Time.time;											
+		secondsInGame = realTime - minutesInGame * 60;							
 
-		if(timeInGame > 60){}
-			//AddMinutes();											// Set seconds to 0 and add a minute
+		if(secondsInGame > 60)
+			AddMinutes();												
 
-		gameObject.guiText.text = "Time: " + timeInGame;
-		//gameObject.guiText.text = "Time: " + min + ":" + timeInGame;
+		secondsInGame = Mathf.Round(secondsInGame * 100) / 100;						// making sure i get 1 digit after whole seconds
+		gameObject.guiText.text = "Time: " + minutesInGame + ":" + secondsInGame;	// setting text on screen
 	}
 
-	void AddMinutes(){
-		Debug.Log("Before "+timeInGame);
-		timeInGame -= 60;
-		Debug.Log ("After "+timeInGame);
-		min += 1;
+	void AddMinutes(){		// Set seconds to 0 and add a minute
+		minutesInGame = Mathf.RoundToInt(secondsInGame / 60);						// setting minutes
 	}
 }
