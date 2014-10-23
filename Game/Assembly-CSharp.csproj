@@ -39,10 +39,10 @@
 	<Reference Include="System.Core" />
 	<Reference Include="System.Xml.Linq" />
 	<Reference Include="UnityEngine">
-	  <HintPath>D:/ProgramFiles/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
+	  <HintPath>D:/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
 	</Reference>
 	<Reference Include="UnityEditor">
-	  <HintPath>D:/ProgramFiles/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
+	  <HintPath>D:/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
 	</Reference>
   </ItemGroup>
   <ItemGroup>
@@ -52,6 +52,8 @@
      <Compile Include="Assets\Resources\GUI\Scripts\Timer.cs" />
      <Compile Include="Assets\Resources\PickUp\Scripts\PickUpRotation.cs" />
      <Compile Include="Assets\Resources\PickUp\Scripts\PickedUp.cs" />
+     <Compile Include="Assets\Resources\Scripts\Platform.cs" />
+     <Compile Include="Assets\Resources\Scripts\PlatformTrigger.cs" />
      <Compile Include="Assets\Resources\Scripts\PlayerRespawn.cs" />
      <Compile Include="Assets\Resources\Scripts\Rotation.cs" />
      <Compile Include="Assets\Resources\Scripts\WallTrap.cs" />
