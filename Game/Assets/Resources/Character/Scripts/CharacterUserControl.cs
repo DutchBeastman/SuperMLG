@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System.Collections;
 
 [RequireComponent(typeof(Character))]
 public class CharacterUserControl : MonoBehaviour {
@@ -25,8 +26,7 @@ public class CharacterUserControl : MonoBehaviour {
 		bool walkToggle = Input.GetKey(KeyCode.LeftShift);
 		float walkMultiplier = (walkByDefault ? walkToggle ? 1 : 0.5f : walkToggle ? 0.5f : 1);
 		move *= walkMultiplier;
-		
-		
-		//character.Move( move, crouch, jump );
+
+		character.Move( move, crouch, jump );
 	}
 }
