@@ -2,6 +2,7 @@
 using System.Collections;
 
 public class Character : MonoBehaviour {
+
 	[SerializeField] float jumpPower = 12;								// determines the jump force applied when jumping (and therefore the jump height)
 	[SerializeField] float airSpeed = 6;								// determines the max speed of the character while airborne
 	[SerializeField] float airControl = 2;								// determines the response speed of controlling the character while airborne
@@ -9,10 +10,18 @@ public class Character : MonoBehaviour {
 	[SerializeField][Range(0.1f,3f)] float moveSpeedMultiplier = 1;	    // how much the move speed of the character will be multiplied by
 	[SerializeField][Range(0.1f,3f)] float animSpeedMultiplier = 1;	    // how much the animation of the character will be multiplied by
 	[SerializeField] AdvancedSettings advancedSettings;
+	
+	public static Character Instance;									// Creating an instance of the Character script to be accesed from other points
+	public Vector3 MoveModifier { get; set;}
+	public Vector3 MoveVector { get; set;}
+	public float VerticalVel { get; set;}
 
 	[System.Serializable]
+
+
 	public class AdvancedSettings
 	{
+
 		public float stationaryTurnSpeed = 180;				// additional turn speed added when the player is stationary (added to animation root rotation)
 		public float movingTurnSpeed = 360;					// additional turn speed added when the player is moving (added to animation root rotation)
 		public float headLookResponseSpeed = 2;				// speed at which head look follows its target
@@ -41,6 +50,11 @@ public class Character : MonoBehaviour {
 	float forwardAmount;
 	Vector3 velocity;
 	IComparer rayHitComparer;
+
+	void OnAwake(){
+
+		Instance = this;
+	}
 
 	void Start(){
 		

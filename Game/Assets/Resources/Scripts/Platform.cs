@@ -77,7 +77,7 @@ public class Platform : MonoBehaviour {
 			}
 			
 			// if the player jumps off the platform before it reaches the end resume the last animation
-			if(direction != lastAnimation  lastFrame > 0) {
+			if(direction != lastAnimation || lastFrame > 0) {
 				direction = lastAnimation; 
 			}
 		}
@@ -88,18 +88,19 @@ public class Platform : MonoBehaviour {
 		// change move modifier on player
 		if(onPlatform == true) {
 			if(gameObject.rigidbody.velocity.y <= 0) {
-				Player_Motion.Instance.MoveModifier = new Vector3(gameObject.rigidbody.velocity.x,
+
+				Character.Instance.MoveModifier = new Vector3(gameObject.rigidbody.velocity.x,
 				                                                  0,
 				                                                  gameObject.rigidbody.velocity.z);
 			} else {
 				// gameObject.rigidbody.velocity.y + 1
 				// player falls through rising platform if he falls on at gravity speeds
-				Player_Motion.Instance.MoveModifier = new Vector3(gameObject.rigidbody.velocity.x,
-				                                                  gameObject.rigidbody.velocity.y + Mathf.Abs(Player_Motion.Instance.MoveVector.y),
+				Character.Instance.MoveModifier = new Vector3(gameObject.rigidbody.velocity.x,
+				                                                  gameObject.rigidbody.velocity.y + Mathf.Abs(Character.Instance.MoveVector.y),
 				                                                  gameObject.rigidbody.velocity.z);
 			}
 		} else {
-			Player_Motion.Instance.MoveModifier = Vector3.zero;
+			Character.Instance.MoveModifier = Vector3.zero;
 		}
 	}
 	

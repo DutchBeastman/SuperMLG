@@ -5,22 +5,22 @@ public class PlatformTrigger : MonoBehaviour {
 		
 		private bool isActive = false;
 		private bool DetectObject = false;
-		public PingPongPlatform parentScript;
+		public Platform parentScript;
 		
 		void Start()
 		{
-			if(transform.parent.gameObject.GetComponent<PingPongPlatform>() == null || transform.parent == null) {
+			if(transform.parent.gameObject.GetComponent<Platform>() == null || transform.parent == null) {
 				Debug.LogError("PingPongPlatform Script is not attached to" + transform.parent.gameObject.name);
 				return;
 			} else {
-				parentScript = transform.parent.gameObject.GetComponent<PingPongPlatform>();
+				parentScript = transform.parent.gameObject.GetComponent<Platform>();
 			}
 		}
 		
 		void OnTriggerEnter(Collider triggerObj)
 		{
 			if(parentScript.AutoMove == false) {
-				if(isActive == false  triggerObj.gameObject.tag == "Player") {
+				if(isActive == false || triggerObj.gameObject.tag == "Player") {
 					parentScript.HoldTimer = 0f;
 					isActive = true;
 				}
@@ -32,7 +32,7 @@ public class PlatformTrigger : MonoBehaviour {
 		
 		void OnTriggerExit()
 		{
-			if(isActive == true  parentScript.AutoMove == false) {
+			if(isActive == true || parentScript.AutoMove == false) {
 				parentScript.PlatformDeactivate();
 				isActive = false;
 			}
