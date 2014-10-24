@@ -22,7 +22,7 @@ public class ObjectMoveArray : MonoBehaviour {
 				}
 				if (transform.position == points [num].position) {
 						Moving [num] = false;
-						num += 1;
+						num = (num  == 1 ? 0 : num + 1);
 						Moving [num] = true;
 				}
 
