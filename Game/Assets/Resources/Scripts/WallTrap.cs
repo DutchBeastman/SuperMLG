@@ -30,7 +30,6 @@ public class WallTrap : MonoBehaviour {
 		if(endPosition == false){
 
 			float distCovered = (Time.time - startTime) * speed ;
-			Debug.Log(distCovered);
 			journeyLength = Vector3.Distance(beginPoint.position, endPoint.position);
 			float fracJourney = distCovered / journeyLength;
 			transform.position = Vector3.Lerp(beginPoint.position, endPoint.position, fracJourney);

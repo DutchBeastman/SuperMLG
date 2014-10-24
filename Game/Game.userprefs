@@ -1,11 +1,9 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Resources\GUI\Scripts\Timer.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Resources\Scripts\ObjectMoveArray.cs">
     <Files>
-      <File FileName="Assets\Resources\PickUp\Scripts\PickedUp.cs" Line="17" Column="1" />
-      <File FileName="Assets\Collectables.cs" Line="15" Column="1" />
-      <File FileName="Assets\Resources\PickUp\Scripts\PickedUp.cs" Line="16" Column="1" />
-      <File FileName="Assets\Resources\GUI\Scripts\Timer.cs" Line="11" Column="3" />
+      <File FileName="Assets\Resources\Scripts\Trampoline.cs" Line="27" Column="46" />
+      <File FileName="Assets\Resources\Scripts\ObjectMoveArray.cs" Line="14" Column="3" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
