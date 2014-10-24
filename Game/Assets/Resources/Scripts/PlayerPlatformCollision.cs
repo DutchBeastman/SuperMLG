@@ -9,9 +9,6 @@ public class PlayerPlatformCollision : MonoBehaviour {
 
 		}
 
-	void Update(){
-		Debug.Log (transform.parent);
-	}
 	void OnCollisionStay(Collision col){
 
 	
