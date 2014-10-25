@@ -15,7 +15,7 @@ public class Timer : MonoBehaviour {
 		realTime  = Time.time;											
 		secondsInGame = realTime - minutesInGame * 60;							
 
-		if(secondsInGame > 60)
+		if(secondsInGame >= 60)
 			AddMinutes();												
 
 		secondsInGame = Mathf.Round(secondsInGame * 100) / 100;						// making sure i get 1 digit after whole seconds
@@ -23,6 +23,6 @@ public class Timer : MonoBehaviour {
 	}
 
 	void AddMinutes(){		// Set seconds to 0 and add a minute
-		minutesInGame = Mathf.RoundToInt(secondsInGame / 60);						// setting minutes
+		minutesInGame = Mathf.RoundToInt(realTime / 60);						// setting minutes
 	}
 }
