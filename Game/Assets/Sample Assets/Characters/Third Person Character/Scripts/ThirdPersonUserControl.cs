@@ -5,7 +5,7 @@ public class ThirdPersonUserControl : MonoBehaviour {
 	
 	public bool walkByDefault = false;                  // toggle for walking state
 	public bool lookInCameraDirection = true;           // should the character be looking in the same direction that the camera is facing
-	
+
 	private Vector3 lookPos;                            // The position that the character should be looking towards
     private ThirdPersonCharacter character;             // A reference to the ThirdPersonCharacter on the object
 	private Transform cam;                              // A reference to the main camera in the scenes transform
@@ -50,12 +50,18 @@ public class ThirdPersonUserControl : MonoBehaviour {
 			// calculate camera relative direction to move:
 			camForward = Vector3.Scale (cam.forward, new Vector3(1,0,1)).normalized;
 			move = v * camForward + h * cam.right;	
+
+
 		} else {
 			// we use world-relative directions in the case of no main camera
 			move = v * Vector3.forward + h * Vector3.right;
+
+
 		}
 
-		if (move.magnitude > 1) move.Normalize();
+		if(move.magnitude > 1){
+		 move.Normalize();
+		}
 
 		#if !MOBILE_INPUT
 		// On non-mobile builds, walk/run speed is modified by a key press.
@@ -63,6 +69,8 @@ public class ThirdPersonUserControl : MonoBehaviour {
 		// We select appropriate speed based on whether we're walking by default, and whether the walk/run toggle button is pressed:
 		float walkMultiplier = (walkByDefault ? walkToggle ? 1 : 0.5f : walkToggle ? 0.5f : 1);
 		move *= walkMultiplier;
+
+			
 		#endif
 
 		// On mobile, walk/run speed is controlled in analogue fashion by the v input value, and therefore needs no special handling.
@@ -74,6 +82,8 @@ public class ThirdPersonUserControl : MonoBehaviour {
 	    lookPos = lookInCameraDirection && cam != null
 	                  ? transform.position + cam.forward * 100
 	                  : transform.position + transform.forward * 100;
+	
+	                    
 
 	    // pass all parameters to the character control script
 		character.Move( move, crouch, jump, lookPos );
