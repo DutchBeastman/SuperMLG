@@ -3,6 +3,8 @@ using System.Collections;
 
 public class ThirdPersonCharacter : MonoBehaviour {
 	
+	[SerializeField] public static bool playSound;
+	[SerializeField] public static bool playJumpSound;
 	[SerializeField] float jumpPower = 12;								// determines the jump force applied when jumping (and therefore the jump height)
 	[SerializeField] float airSpeed = 6;								// determines the max speed of the character while airborne
 	[SerializeField] float airControl = 2;								// determines the response speed of controlling the character while airborne
@@ -15,6 +17,7 @@ public class ThirdPersonCharacter : MonoBehaviour {
 	[System.Serializable]
 	public class AdvancedSettings
 	{
+
 		public float stationaryTurnSpeed = 180;				// additional turn speed added when the player is stationary (added to animation root rotation)
 		public float movingTurnSpeed = 360;					// additional turn speed added when the player is moving (added to animation root rotation)
 		public float headLookResponseSpeed = 2;				// speed at which head look follows its target
@@ -27,6 +30,7 @@ public class ThirdPersonCharacter : MonoBehaviour {
 		public float jumpRepeatDelayTime = 0.25f;			// amount of time that must elapse between landing and being able to jump again
 		public float runCycleLegOffset = 0.2f;				// animation cycle offset (0-1) used for determining correct leg to jump off
 		public float groundStickyEffect = 5f;				// power of 'stick to ground' effect - prevents bumping down slopes.
+
 	}
 
 	public Transform lookTarget { get; set; }               // The point where the character will be looking at
@@ -48,6 +52,7 @@ public class ThirdPersonCharacter : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+
 		animator = GetComponentInChildren<Animator>();
 		capsule = collider as CapsuleCollider;
 
@@ -117,6 +122,8 @@ public class ThirdPersonCharacter : MonoBehaviour {
 		Vector3 localMove = transform.InverseTransformDirection (moveInput);
 		turnAmount = Mathf.Atan2 (localMove.x, localMove.z);
 		forwardAmount = localMove.z;
+
+
 	}
 
 	void TurnTowardsCameraForward ()
@@ -171,12 +178,15 @@ public class ThirdPersonCharacter : MonoBehaviour {
 
 	void GroundCheck ()
 	{
+	
 		Ray ray = new Ray (transform.position + Vector3.up * .1f, -Vector3.up);
 		RaycastHit[] hits = Physics.RaycastAll (ray, .5f);
 		System.Array.Sort (hits, rayHitComparer);
         
 		if (velocity.y < jumpPower * .5f) {
 			onGround = false;
+			playSound = false;
+
 			rigidbody.useGravity = true;
 			foreach (var hit in hits) {
 				// check whether we hit a non-trigger collider (and not the character itself)
@@ -185,10 +195,12 @@ public class ThirdPersonCharacter : MonoBehaviour {
 
 					// stick to surface - helps character stick to ground - specially when running down slopes
 					if (velocity.y <= 0) {
+
 						rigidbody.position = Vector3.MoveTowards (rigidbody.position, hit.point, Time.deltaTime * advancedSettings.groundStickyEffect);
 					}
 
 					onGround = true;
+					playJumpSound = false;
 					rigidbody.useGravity = false;
 					break;
 				}
@@ -208,10 +220,24 @@ public class ThirdPersonCharacter : MonoBehaviour {
 			// set friction to low or high, depending on if we're moving
 			if (moveInput.magnitude == 0) {
 				// when not moving this helps prevent sliding on slopes:
+				playSound = false;
+
+			
+
 				collider.material = advancedSettings.highFrictionMaterial;
 			} else {
 				// but when moving, we want no friction:
+
+				playSound = true;
+
+
+			
+
+
+
+
 				collider.material = advancedSettings.zeroFrictionMaterial;
+
 			}
 		} else {
 			// while in air, we want no friction against surfaces (walls, ceilings, etc)
@@ -243,6 +269,7 @@ public class ThirdPersonCharacter : MonoBehaviour {
 
 	void HandleAirborneVelocities ()
 	{
+		playJumpSound = true;
 		// we allow some movement in air, but it's very different to when on ground
 		// (typically allowing a small change in trajectory)
 		Vector3 airMove = new Vector3 (moveInput.x * airSpeed, velocity.y, moveInput.z * airSpeed);
@@ -270,12 +297,13 @@ public class ThirdPersonCharacter : MonoBehaviour {
 		if (!onGround) {
 			animator.SetFloat ("Jump", velocity.y);
 		}
-
+	
 		// calculate which leg is behind, so as to leave that leg trailing in the jump animation
 		// (This code is reliant on the specific run cycle offset in our animations,
 		// and assumes one leg passes the other at the normalized clip times of 0.0 and 0.5)
 		float runCycle = Mathf.Repeat (animator.GetCurrentAnimatorStateInfo (0).normalizedTime + advancedSettings.runCycleLegOffset, 1);
 		float jumpLeg = (runCycle < half ? 1 : -1) * forwardAmount;
+
 		if (onGround) {
 			animator.SetFloat ("JumpLeg", jumpLeg);
 		}
@@ -284,9 +312,13 @@ public class ThirdPersonCharacter : MonoBehaviour {
 		// which affects the movement speed because of the root motion.
 		if (onGround && moveInput.magnitude > 0) {
 			animator.speed = animSpeedMultiplier;
+
+
 		} else {
 			// but we don't want to use that while airborne
 			animator.speed = 1;
+
+
 		}
 	}
 
@@ -330,12 +362,14 @@ public class ThirdPersonCharacter : MonoBehaviour {
 		// this allows us to modify the positional speed before it's applied.
 		rigidbody.rotation = animator.rootRotation;
 		if (onGround && Time.deltaTime > 0) {
+
 			Vector3 v = (animator.deltaPosition * moveSpeedMultiplier) / Time.deltaTime;
 
 			// we preserve the existing y part of the current velocity.
 			v.y = rigidbody.velocity.y;
 			rigidbody.velocity = v;
 		}
+
 	}
 	
 
