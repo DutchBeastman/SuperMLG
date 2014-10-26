@@ -20,8 +20,9 @@ public class ArtificialIntelligence : MonoBehaviour {
 	}
 	// switch direction
 	void FixedUpdate () {
+		rigidbody.velocity = new Vector3(0,0,0);
 		if(waypoints.Length > 0){
-			if(Vector3.Distance(transform.position, waypoints[wayPointIndex].position) < 1 )
+			if(Vector3.Distance(transform.position, waypoints[wayPointIndex].position) < 0.5f )
 			{
 				wayPointIndex++;
 			}
@@ -30,7 +31,7 @@ public class ArtificialIntelligence : MonoBehaviour {
 				
 			}
 			Vector3 targetDist = waypoints[wayPointIndex].position - transform.position;
-			transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(targetDist), rotationSpeed * Time.deltaTime);
+			transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.LookRotation(targetDist), rotationSpeed * Time.deltaTime);
 			transform.Translate(Vector3.forward * speed * Time.deltaTime);
 		}
 		
@@ -41,17 +42,10 @@ public class ArtificialIntelligence : MonoBehaviour {
 			//rotationSpeed += 0.5f;
 			//speed -= 1;
 			if(wayPointIndex == waypoints.Length) {
-				wayPointIndex = 0;
+				wayPointIndex = waypoints.Length;
 				
 			}
 			
-		}
-	}
-	void OnTriggerExit(Collider col)
-	{
-		if(col.name == "waypoint"){
-			//rotationSpeed -= 0.5f;
-			//speed += 1;
 		}
 	}
 }
