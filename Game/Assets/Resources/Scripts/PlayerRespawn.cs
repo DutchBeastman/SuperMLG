@@ -6,7 +6,7 @@ public class PlayerRespawn : MonoBehaviour {
 	public Transform respawnPoint;
 	public GameObject player;
 	public GameObject checkpointMover;
-	// Use this for initialization
+	// Use this for initialization	
 	void Start () {
 	
 	}
