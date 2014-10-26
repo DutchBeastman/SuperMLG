@@ -1322,7 +1322,7 @@ Transform:
   m_PrefabInternal: {fileID: 444698085}
   m_GameObject: {fileID: 72398980}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.54539394, y: 0, z: 0}
+  m_LocalPosition: {x: -2.69605875, y: 0, z: .769453883}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 809479528}
@@ -6631,8 +6631,20 @@ Prefab:
       objectReference: {fileID: 635573105}
     - target: {fileID: 100172, guid: 151c887a6350c184f9b4bbae873a9824, type: 2}
       propertyPath: m_TagString
-      value: Player
+      value: Untagged
       objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 151c887a6350c184f9b4bbae873a9824, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: .769453883
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 151c887a6350c184f9b4bbae873a9824, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -2.69605875
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: 151c887a6350c184f9b4bbae873a9824, type: 2}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 72398981}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 151c887a6350c184f9b4bbae873a9824, type: 2}
   m_RootGameObject: {fileID: 809479527}
@@ -11385,7 +11397,7 @@ GameObject:
   - 114: {fileID: 809479531}
   m_Layer: 9
   m_Name: AI Character
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11421,7 +11433,7 @@ MonoBehaviour:
   rotationSpeed: 1
   waypoints:
   - {fileID: 635573105}
-  target: {fileID: 0}
+  target: {fileID: 72398981}
 --- !u!95 &809479530
 Animator:
   serializedVersion: 3

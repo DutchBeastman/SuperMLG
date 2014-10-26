@@ -25,7 +25,7 @@ public class ArtificialIntelligence : MonoBehaviour {
 	void Start () {
 		character = GetComponent<ThirdPersonCharacter>();
 		wayPointIndex = 0;
-		rigidbody.velocity	=	new Vector3(0,1,1) * maxSpeed;
+		rigidbody.velocity	=	new Vector3(1,0,1) * maxSpeed;
 	}
 	void Update(){
 		Seek();
@@ -54,8 +54,13 @@ public class ArtificialIntelligence : MonoBehaviour {
 		// hierdoor gaat hij niet in een rechte lijn naar de target
 		// hoe zwaarder het object hoe moeilijker hij kan bijsturen
 		rigidbody.velocity				=	rigidbody.velocity + steeringForce / mass;
-		
-		character.Move(desiredVelocity, false, false,steeringForce);
+		if(target != null){
+
+			character.Move(desiredVelocity, false, false,steeringForce);
+		}else{
+			// We still need to call the character's move function, but we send zeroed input as the move param.
+			character.Move( Vector3.zero, false, false, transform.position + transform.forward * 100 );
+		}
 	}
 	void FixedUpdate () {
 		if(waypoints.Length > 0){
@@ -67,19 +72,13 @@ public class ArtificialIntelligence : MonoBehaviour {
 			{
 				wayPointIndex = 0;
 			}
-			Vector3 targetDist = waypoints[wayPointIndex].position - transform.position;
+			//Vector3 targetDist = waypoints[wayPointIndex].position - transform.position;
 			//transform.Translate(Vector3.forward * speed * Time.deltaTime);
 			//Quaternion lookPosition =(transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(targetDist), rotationSpeed * Time.deltaTime));
-			moveDirection = (Vector3.forward * speed * Time.deltaTime);
-			if (waypoints[wayPointIndex] != null)
-			{
+			//moveDirection = (Vector3.forward * speed * Time.deltaTime);
 
+				
 
-			} else 
-			{
-				// We still need to call the character's move function, but we send zeroed input as the move param.
-				character.Move( Vector3.zero, false, false, transform.position + transform.forward * 100 );
-			}
 		}
 		
 	}
