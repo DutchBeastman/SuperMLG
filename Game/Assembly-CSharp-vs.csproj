@@ -39,10 +39,10 @@
 	<Reference Include="System.Core" />
 	<Reference Include="System.Xml.Linq" />
 	<Reference Include="UnityEngine">
-	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
+	  <HintPath>D:/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
 	</Reference>
 	<Reference Include="UnityEditor">
-	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
+	  <HintPath>D:/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
 	</Reference>
   </ItemGroup>
   <ItemGroup>
@@ -56,6 +56,7 @@
      <Compile Include="Assets\Resources\Scripts\ArtificialIntelligence.cs" />
      <Compile Include="Assets\Resources\Scripts\ObjectMoveArray.cs" />
      <Compile Include="Assets\Resources\Scripts\ObjectTeleport.cs" />
+     <Compile Include="Assets\Resources\Scripts\OldAI.cs" />
      <Compile Include="Assets\Resources\Scripts\Platform.cs" />
      <Compile Include="Assets\Resources\Scripts\PlatformTrigger.cs" />
      <Compile Include="Assets\Resources\Scripts\PlayerPlatformCollision.cs" />
