@@ -25,7 +25,7 @@ public class ArtificialIntelligence : MonoBehaviour {
 	void Start () {
 		character = GetComponent<ThirdPersonCharacter>();
 		wayPointIndex = 0;
-		rigidbody.velocity	=	new Vector3(1,0,1) * maxSpeed;
+		rigidbody.velocity	=	new Vector3(0,0,0) * maxSpeed;
 	}
 	void Update(){
 		Seek();
