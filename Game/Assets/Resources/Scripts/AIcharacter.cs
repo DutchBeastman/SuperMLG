@@ -65,7 +65,7 @@ public class AIcharacter : MonoBehaviour {
 		}
 		
 		rayHitComparer = new RayHitComparer ();
-		
+
 		SetUpAnimator();
 	}
 	
@@ -75,7 +75,7 @@ public class AIcharacter : MonoBehaviour {
 	public void Move (Vector3 move, bool crouch, bool jump, Vector3 lookPos) {
 		
 		if (move.magnitude > 1) move.Normalize();
-		
+		animator.SetFloat ("Forward", 1, 1f, Time.deltaTime);
 		// transfer input parameters to member variables.
 		this.moveInput = move;
 		this.crouchInput = crouch;
@@ -302,7 +302,7 @@ public class AIcharacter : MonoBehaviour {
 		// (This code is reliant on the specific run cycle offset in our animations,
 		// and assumes one leg passes the other at the normalized clip times of 0.0 and 0.5)
 		float runCycle = Mathf.Repeat (animator.GetCurrentAnimatorStateInfo (0).normalizedTime + advancedSettings.runCycleLegOffset, 1);
-		float jumpLeg = (runCycle < half ? 1 : -1) * forwardAmount;
+		float jumpLeg = -1;
 		
 		if (onGround) {
 			animator.SetFloat ("JumpLeg", jumpLeg);

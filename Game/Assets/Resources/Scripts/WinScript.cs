@@ -15,7 +15,7 @@ public class WinScript : MonoBehaviour {
 
 	void OnCollisionEnter(Collision col){
 		if(col.collider.tag == "Player"){
-			Debug.Log("winning");
+			Application.LoadLevel("EndScreen");
 		}
 	}
 }

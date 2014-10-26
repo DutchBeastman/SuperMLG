@@ -1,22 +1,14 @@
 ﻿<Properties>
-<<<<<<< HEAD
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Resources\Scripts\AIcharacter.cs">
     <Files>
-      <File FileName="Assets\Resources\Scripts\PlayerRespawn.cs" Line="29" Column="50" />
-      <File FileName="Assets\Sample Assets\Characters\Third Person Character\Scripts\AICharacterControl.cs" Line="33" Column="5" />
-      <File FileName="Assets\Resources\Scripts\ArtificialIntelligence.cs" Line="1" Column="1" />
-      <File FileName="Assets\Sample Assets\Characters\Third Person Character\Scripts\ThirdPersonCharacter.cs" Line="90" Column="64" />
-      <File FileName="Assets\Resources\Scripts\AIcharacter.cs" Line="293" Column="3" />
-=======
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Sample Assets\Characters\Third Person Character\Scripts\AICharacterControl.cs">
-    <Files>
-      <File FileName="Assets\Resources\Scripts\ArtificialIntelligence.cs" Line="60" Column="9" />
-      <File FileName="Assets\Sample Assets\Characters\Third Person Character\Scripts\ThirdPersonCharacter.cs" Line="231" Column="22" />
-      <File FileName="Assets\Resources\Scripts\AIcharacter.cs" Line="224" Column="5" />
-      <File FileName="Assets\Sample Assets\Characters\Third Person Character\Scripts\AICharacterControl.cs" Line="33" Column="5" />
->>>>>>> origin/master
+      <File FileName="Assets\Resources\Scripts\Rotation.cs" Line="6" Column="2" />
+      <File FileName="Assets\Resources\Scripts\CameraRotation.cs" Line="17" Column="16" />
+      <File FileName="Assets\Resources\Scripts\WinScript.cs" Line="18" Column="39" />
+      <File FileName="Assets\Resources\Scripts\ObjectMoveArray.cs" Line="35" Column="4" />
+      <File FileName="Assets\Resources\Scripts\CameraMove.cs" Line="17" Column="3" />
+      <File FileName="Assets\Resources\Scripts\ObjectTeleport.cs" Line="6" Column="1" />
+      <File FileName="Assets\Resources\Scripts\AIcharacter.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
