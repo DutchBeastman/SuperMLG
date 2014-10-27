@@ -52,8 +52,13 @@
      <Compile Include="Assets\Resources\GUI\Scripts\Timer.cs" />
      <Compile Include="Assets\Resources\PickUp\Scripts\PickUpRotation.cs" />
      <Compile Include="Assets\Resources\PickUp\Scripts\PickedUp.cs" />
+     <Compile Include="Assets\Resources\Scripts\AIcharacter.cs" />
+     <Compile Include="Assets\Resources\Scripts\ArtificialIntelligence.cs" />
+     <Compile Include="Assets\Resources\Scripts\CameraMove.cs" />
+     <Compile Include="Assets\Resources\Scripts\CameraRotation.cs" />
      <Compile Include="Assets\Resources\Scripts\ObjectMoveArray.cs" />
      <Compile Include="Assets\Resources\Scripts\ObjectTeleport.cs" />
+     <Compile Include="Assets\Resources\Scripts\OldAI.cs" />
      <Compile Include="Assets\Resources\Scripts\Platform.cs" />
      <Compile Include="Assets\Resources\Scripts\PlatformTrigger.cs" />
      <Compile Include="Assets\Resources\Scripts\PlayerPlatformCollision.cs" />
