@@ -10,11 +10,6 @@ public class PlayerRespawn : MonoBehaviour {
 	void Start () {
 	
 	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
 
 	void OnCollisionEnter(Collision col){
 		if(col.collider.tag == "KillingObject"){
@@ -26,8 +21,9 @@ public class PlayerRespawn : MonoBehaviour {
 		if(col.collider.tag == "KillingObject"){
 			player.transform.position = respawnPoint.position;
 		}
-		if(col.collider.gameObject == checkpointMover){
-			respawnPoint.transform.position = checkpointMover.transform.position;
+		if(col.collider.tag == "CheckPoint"){
+			respawnPoint.transform.position = col.transform.position;
+			Debug.Log(col.transform.position);
 		}
 	}
 

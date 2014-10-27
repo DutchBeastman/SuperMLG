@@ -9,6 +9,7 @@ TagManager:
   - Fire
   - KillingObject
   - MovingObjects
+  - CheckPoint
   - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX
