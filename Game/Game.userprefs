@@ -1,10 +1,8 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Resources\GUI\Scripts\Collectables.cs">
+  <MonoDevelop.Ide.Workspace />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Resources\Scripts\OldAI.cs">
     <Files>
-      <File FileName="Assets\Resources\Scripts\PlayerRespawn.cs" Line="24" Column="28" />
-      <File FileName="Assets\Resources\PickUp\Scripts\PickedUp.cs" Line="1" Column="1" />
-      <File FileName="Assets\Resources\GUI\Scripts\Collectables.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\OldAI.cs" Line="8" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
