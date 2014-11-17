@@ -50,8 +50,14 @@
      <Compile Include="Assets\Sample Assets\Effects\Image Effects (Pro Only)\Scripts\PostEffectsBase.js" />
      <Compile Include="Assets\Sample Assets\Utility\DragRigidbody.js" />
      <Compile Include="Assets\Sample Assets\Utility\TimedObjectDestructor.js" />
+     <Compile Include="Assets\TerrainAndTextures\Standard Assets\Character Controllers\Sources\Scripts\CharacterMotor.js" />
+     <Compile Include="Assets\TerrainAndTextures\Standard Assets\Character Controllers\Sources\Scripts\FPSInputController.js" />
+     <Compile Include="Assets\TerrainAndTextures\Standard Assets\Character Controllers\Sources\Scripts\PlatformInputController.js" />
+     <Compile Include="Assets\TerrainAndTextures\Standard Assets\Character Controllers\Sources\Scripts\ThirdPersonCamera.js" />
+     <Compile Include="Assets\TerrainAndTextures\Standard Assets\Character Controllers\Sources\Scripts\ThirdPersonController.js" />
      <None Include="Assets\Sample Assets\Effects\Toon Shading\Shaders\Toony-Basic.shader" />
      <None Include="Assets\Sample Assets\Prototyping\Shaders\WorldCoord Diffuse.shader" />
+     <None Include="Assets\TerrainAndTextures\Info.txt" />
      <None Include="Assets\Sample Assets\Effects\Light Shafts\Shaders\SamplePositions.shader" />
      <None Include="Assets\Sample Assets\Effects\Image Effects (Pro Only)\Shaders\_DepthOfField\DepthOfFieldScatter.shader" />
      <None Include="Assets\Sample Assets\Effects\Tessellation Shaders\Shaders\BumpedSpecularSmooth.shader" />

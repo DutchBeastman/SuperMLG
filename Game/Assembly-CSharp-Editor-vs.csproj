@@ -51,6 +51,7 @@
      <Compile Include="Assets\Sample Assets\Cross Platform Input\Scripts\Editor\CrossPlatformInputInitialize.cs" />
      <None Include="Assets\Sample Assets\Effects\Toon Shading\Shaders\Toony-Basic.shader" />
      <None Include="Assets\Sample Assets\Prototyping\Shaders\WorldCoord Diffuse.shader" />
+     <None Include="Assets\TerrainAndTextures\Info.txt" />
      <None Include="Assets\Sample Assets\Effects\Light Shafts\Shaders\SamplePositions.shader" />
      <None Include="Assets\Sample Assets\Effects\Image Effects (Pro Only)\Shaders\_DepthOfField\DepthOfFieldScatter.shader" />
      <None Include="Assets\Sample Assets\Effects\Tessellation Shaders\Shaders\BumpedSpecularSmooth.shader" />
@@ -80,7 +81,7 @@
      <None Include="Assets\Sample Assets\Effects\Tessellation Shaders\Shaders\BumpedSpecularDisplacement.shader" />
      <None Include="Assets\Sample Assets\Effects\Light Shafts\Shaders\ColorFilter.shader" />
  <Reference Include="Assembly-UnityScript">
- <HintPath>C:/Users/Kerim/Desktop/MLGRunner/Game/Library/ScriptAssemblies/Assembly-UnityScript.dll</HintPath>
+ <HintPath>C:/Users/Kerim/Desktop/SuperMLGRunner/SuperMLG/Game/Library/ScriptAssemblies/Assembly-UnityScript.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.Graphs">
  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEditor.Graphs.dll</HintPath>

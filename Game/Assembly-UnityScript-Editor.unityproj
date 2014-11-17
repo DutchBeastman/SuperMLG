@@ -50,6 +50,7 @@
      <Compile Include="Assets\Sample Assets\Effects\Light Shafts\Editor\LightShaftsEditor.js" />
      <None Include="Assets\Sample Assets\Effects\Toon Shading\Shaders\Toony-Basic.shader" />
      <None Include="Assets\Sample Assets\Prototyping\Shaders\WorldCoord Diffuse.shader" />
+     <None Include="Assets\TerrainAndTextures\Info.txt" />
      <None Include="Assets\Sample Assets\Effects\Light Shafts\Shaders\SamplePositions.shader" />
      <None Include="Assets\Sample Assets\Effects\Image Effects (Pro Only)\Shaders\_DepthOfField\DepthOfFieldScatter.shader" />
      <None Include="Assets\Sample Assets\Effects\Tessellation Shaders\Shaders\BumpedSpecularSmooth.shader" />

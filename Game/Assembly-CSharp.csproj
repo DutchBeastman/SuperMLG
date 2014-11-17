@@ -46,6 +46,7 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Campfire Pack\Script\SwitchView.cs" />
      <Compile Include="Assets\Resources\Character\Scripts\Character.cs" />
      <Compile Include="Assets\Resources\Character\Scripts\CharacterUserControl.cs" />
      <Compile Include="Assets\Resources\GUI\Scripts\Collectables.cs" />
@@ -56,6 +57,7 @@
      <Compile Include="Assets\Resources\Scripts\ArtificialIntelligence.cs" />
      <Compile Include="Assets\Resources\Scripts\CameraMove.cs" />
      <Compile Include="Assets\Resources\Scripts\CameraRotation.cs" />
+     <Compile Include="Assets\Resources\Scripts\MenuScript.cs" />
      <Compile Include="Assets\Resources\Scripts\ObjectMoveArray.cs" />
      <Compile Include="Assets\Resources\Scripts\ObjectTeleport.cs" />
      <Compile Include="Assets\Resources\Scripts\OldAI.cs" />
@@ -141,8 +143,10 @@
      <Compile Include="Assets\Sample Assets\Utility\WaypointProgressTracker.cs" />
      <Compile Include="Assets\Sample Assets\Vehicles\Rolling Ball\Scripts\Ball.cs" />
      <Compile Include="Assets\Sample Assets\Vehicles\Rolling Ball\Scripts\BallUserControl.cs" />
+     <Compile Include="Assets\TerrainAndTextures\Standard Assets\Character Controllers\Sources\Scripts\MouseLook.cs" />
      <None Include="Assets\Sample Assets\Effects\Toon Shading\Shaders\Toony-Basic.shader" />
      <None Include="Assets\Sample Assets\Prototyping\Shaders\WorldCoord Diffuse.shader" />
+     <None Include="Assets\TerrainAndTextures\Info.txt" />
      <None Include="Assets\Sample Assets\Effects\Light Shafts\Shaders\SamplePositions.shader" />
      <None Include="Assets\Sample Assets\Effects\Image Effects (Pro Only)\Shaders\_DepthOfField\DepthOfFieldScatter.shader" />
      <None Include="Assets\Sample Assets\Effects\Tessellation Shaders\Shaders\BumpedSpecularSmooth.shader" />
