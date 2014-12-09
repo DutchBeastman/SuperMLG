@@ -5,12 +5,12 @@ public class PickUpRotation : MonoBehaviour {
 
 	Vector3 rotationSpeed;
 	void Start () {
-		rotationSpeed.x = Random.Range(80, 120);
-		rotationSpeed.y = Random.Range(120, 160);
-		rotationSpeed.z = Random.Range(60, 80);
+		rotationSpeed.x = 0;
+		rotationSpeed.z = 0;
 	}
 
 	void Update () {
-		transform.Rotate(rotationSpeed * Time.deltaTime);
+		rotationSpeed.y = Random.Range(0, 360);
+		transform.Rotate((rotationSpeed * Time.deltaTime)/4);
 	}
 }
